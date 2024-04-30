@@ -23,6 +23,9 @@
 		E17D6C2B2BDFE45300BEFD8C /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C2A2BDFE45300BEFD8C /* AlamofireImage */; };
 		E17D6C312BE06BD600BEFD8C /* GitHubUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C302BE06BD600BEFD8C /* GitHubUsersRepository.swift */; };
 		E17D6C352BE07F6B00BEFD8C /* GitHubUsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C342BE07F6B00BEFD8C /* GitHubUsersTableViewController.swift */; };
+		E17D6C382BE0B12000BEFD8C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C362BE0B12000BEFD8C /* DetailViewController.swift */; };
+		E17D6C392BE0B12000BEFD8C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17D6C372BE0B12000BEFD8C /* DetailViewController.xib */; };
+		E17D6C3C2BE0C29600BEFD8C /* UserDetailDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C3B2BE0C29600BEFD8C /* UserDetailDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		E17D6C252BDFE0EB00BEFD8C /* GitHubUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserTableViewCell.swift; sourceTree = "<group>"; };
 		E17D6C302BE06BD600BEFD8C /* GitHubUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersRepository.swift; sourceTree = "<group>"; };
 		E17D6C342BE07F6B00BEFD8C /* GitHubUsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersTableViewController.swift; sourceTree = "<group>"; };
+		E17D6C362BE0B12000BEFD8C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E17D6C372BE0B12000BEFD8C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		E17D6C3B2BE0C29600BEFD8C /* UserDetailDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				E17D6C302BE06BD600BEFD8C /* GitHubUsersRepository.swift */,
 				E17D6C252BDFE0EB00BEFD8C /* GitHubUserTableViewCell.swift */,
 				E17D6C342BE07F6B00BEFD8C /* GitHubUsersTableViewController.swift */,
+				E17D6C362BE0B12000BEFD8C /* DetailViewController.swift */,
+				E17D6C372BE0B12000BEFD8C /* DetailViewController.xib */,
+				E17D6C3A2BE0C26E00BEFD8C /* DataProvider */,
 				E17D6C102BDFC32600BEFD8C /* Models */,
 				E17D6C002BDFC24200BEFD8C /* Main.storyboard */,
 				E17D6C032BDFC24300BEFD8C /* Assets.xcassets */,
@@ -98,6 +107,14 @@
 				E17D6C112BDFC33E00BEFD8C /* GitHubUser.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E17D6C3A2BE0C26E00BEFD8C /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				E17D6C3B2BE0C29600BEFD8C /* UserDetailDataProvider.swift */,
+			);
+			path = DataProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +190,7 @@
 				E17D6C042BDFC24300BEFD8C /* Assets.xcassets in Resources */,
 				E17D6C072BDFC24300BEFD8C /* Base in Resources */,
 				E17D6C022BDFC24200BEFD8C /* Base in Resources */,
+				E17D6C392BE0B12000BEFD8C /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,9 +201,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17D6C382BE0B12000BEFD8C /* DetailViewController.swift in Sources */,
 				E17D6BFF2BDFC24200BEFD8C /* GitHubUsersViewController.swift in Sources */,
 				E17D6C312BE06BD600BEFD8C /* GitHubUsersRepository.swift in Sources */,
 				E17D6BFB2BDFC24200BEFD8C /* AppDelegate.swift in Sources */,
+				E17D6C3C2BE0C29600BEFD8C /* UserDetailDataProvider.swift in Sources */,
 				E17D6C0F2BDFC30A00BEFD8C /* GitHubUsersViewModel.swift in Sources */,
 				E17D6BFD2BDFC24200BEFD8C /* SceneDelegate.swift in Sources */,
 				E17D6C122BDFC33E00BEFD8C /* GitHubUser.swift in Sources */,
