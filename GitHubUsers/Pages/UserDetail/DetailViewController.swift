@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 fileprivate enum DetailViewControllerConstants {
     enum Strings {
@@ -37,25 +38,18 @@ class DetailViewController: UIViewController {
     @IBAction func closeButtonTap(_ sender: UIButton) {
         dismiss(animated: true)
     }
-    
 
     @IBAction func saveButtonTap(_ sender: UIButton) {
-        do {
-            try GitHubUsersRepository.shared.updateGitHubUser(by: user)
-            showAlert(with: "Save Successful") // Show success message
-        } catch let error {
-            showAlert(with: error.localizedDescription)
-        }
+        _ = viewModel.updateUser()
     }
     
     @IBOutlet weak var saveButton: UIButton!
     
+    var viewModel: DetailViewModel!
+    private var cancellables = Set<AnyCancellable>()
     
-    var user: GitHubUser
-    let dataProvider = UserDataProvider()
-    
-    init(user: GitHubUser) {
-        self.user = user
+    init(viewModel: DetailViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -65,7 +59,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetch(user: user)
+        bindViewModelOutputs()
+        _ = viewModel.fetchUser()
         locationStack.isHidden = true
         loginStack.isHidden = true
         avatarImageView.layer.cornerRadius = Constants.Numbers.avatarCornerRadius
@@ -74,19 +69,29 @@ class DetailViewController: UIViewController {
         blogTextView.delegate = self
     }
     
-    func fetch(user: GitHubUser) {
-        dataProvider.getUser(user: user) { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let user):
-                self.user = user
-                self.configure(with: user)
-            case .failure(let error):
-                print("Error fetching GitHub users: \(error)")
+    private func bindViewModelOutputs() {
+        let viewModelOutput = viewModel.bindOutput()
+        
+        viewModelOutput.$user
+            .sink { [weak self] user in
+                self?.configure(with: user)
             }
-        }
+            .store(in: &cancellables)
+        
+        viewModelOutput.showError
+            .sink { [weak self] errorMessage in
+                self?.showAlert(with: errorMessage)
+            }
+            .store(in: &cancellables)
+        
+        viewModelOutput.showSuccess
+            .sink { [weak self] _ in
+                self?.showAlert(with: "Save Successful")
+            }
+            .store(in: &cancellables)
     }
 
+    
     func configure(with user: GitHubUser) {
         nameTextField.text = user.name
         bioLabel.text = user.bio

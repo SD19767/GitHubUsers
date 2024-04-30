@@ -33,7 +33,8 @@ class GitHubUsersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewControllerToPresent = DetailViewController(user: users[indexPath.row])
+        let viewModel = DetailViewModel(user: users[indexPath.row])
+        let viewControllerToPresent = DetailViewController(viewModel: viewModel)
         if let sheet = viewControllerToPresent.sheetPresentationController {
                 sheet.detents = [.medium(), .large()]
                 sheet.largestUndimmedDetentIdentifier = .medium

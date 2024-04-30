@@ -26,13 +26,18 @@ class GitHubUsersRepository {
         }
     }
     
-    func updateGitHubUser(by user: GitHubUser) throws {
-            guard let index = users.firstIndex(where: { $0.login == user.login }) else {
-                throw NSError(domain: "GitHubUsersRepository", code: 404, userInfo: [NSLocalizedDescriptionKey: "User not found"])
-            }
-            
-            if users[index].name != user.name {
-                users[index].name = user.name
-            }
+    func updateGitHubUser(by user: GitHubUser) -> Result<Void, Error> {
+        guard let index = users.firstIndex(where: { $0.login == user.login }) else {
+            let error = NSError(domain: "GitHubUsersRepository", code: 404, userInfo: [NSLocalizedDescriptionKey: "User not found"])
+            return .failure(error)
+        }
+        
+        if users[index].name != user.name {
+            users[index].name = user.name
+            return .success(())
+        } else {
+            let error = NSError(domain: "GitHubUsersRepository", code: 500, userInfo: [NSLocalizedDescriptionKey: "User name not updated"])
+            return .failure(error)
+        }
     }
 }
