@@ -20,7 +20,7 @@ struct GitHubUser: Codable {
     let receivedEventsURL: String
     let type: String
     let siteAdmin: Bool
-    let name, company: String?
+    var name, company: String?
     let blog: String?
     let location, email: String?
     let hireable: Bool?

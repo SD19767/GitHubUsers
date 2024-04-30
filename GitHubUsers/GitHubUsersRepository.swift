@@ -10,18 +10,29 @@ import Alamofire
 
 class GitHubUsersRepository {
     static let shared = GitHubUsersRepository()
+    @Published var users: [GitHubUser] = []
     
     private init() {}
     
-    func fetchGitHubUsers(completion: @escaping (Result<[GitHubUser], Error>) -> Void) {
-        AF.request("https://api.github.com/users").responseDecodable(of: [GitHubUser].self) { response in
-            switch response.result {
+    func fetchGitHubUsers() {
+        let dataProvider = UserDataProvider()
+        dataProvider.getListUsers { [weak self] result in
+            switch result {
             case .success(let users):
-                let limitedUsers = Array(users.prefix(100))
-                completion(.success(limitedUsers))
+                self?.users = users
             case .failure(let error):
-                completion(.failure(error))
+                print("Error fetching GitHub users: \(error)")
             }
         }
+    }
+    
+    func updateGitHubUser(by user: GitHubUser) throws {
+            guard let index = users.firstIndex(where: { $0.login == user.login }) else {
+                throw NSError(domain: "GitHubUsersRepository", code: 404, userInfo: [NSLocalizedDescriptionKey: "User not found"])
+            }
+            
+            if users[index].name != user.name {
+                users[index].name = user.name
+            }
     }
 }

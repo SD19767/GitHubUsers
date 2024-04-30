@@ -13,55 +13,41 @@ class GitHubUsersViewModel {
     private var cancellables = Set<AnyCancellable>()
     
     @Published var tableControllers: [GitHubUsersTableViewController] = []
-    @Published var users: [GitHubUser] = []
     @Published var totalPages: Int = 0
-    private var isPaginationEnabled = true // 添加分頁模式的狀態
+    @Published var userTotalCount: Int = 0
+    private var isPaginationEnabled = true
     private let usersPerPage = 20
     
+    init() {
+        repository.$users
+            .sink { [weak self] users in
+                self?.updateTableControllers(with: users)
+                self?.userTotalCount = users.count
+            }
+            .store(in: &cancellables)
+    }
+    
     func fetchGitHubUsers() {
-        if isPaginationEnabled {
-            fetchGitHubUsersPaginated()
-        } else {
-            fetchGitHubUsersNonPaginated()
-        }
+        repository.fetchGitHubUsers()
     }
     
     func enablePagination() {
         isPaginationEnabled = true
-        fetchGitHubUsers()
+        updateTableControllers(with: repository.users)
     }
     
     func disablePagination() {
         isPaginationEnabled = false
-        fetchGitHubUsers()
+        updateTableControllers(with: repository.users)
     }
     
-    private func fetchGitHubUsersPaginated() {
-        repository.fetchGitHubUsers { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let users):
-                let totalPages = (users.count + 19) / 20
-                self.totalPages = totalPages
-                self.users = users
-                self.tableControllers = self.createPaginatedTableControllers(with: users)
-            case .failure(let error):
-                print("Error fetching GitHub users: \(error)")
-            }
+    private func updateTableControllers(with users: [GitHubUser]) {
+        if isPaginationEnabled {
+            tableControllers = createPaginatedTableControllers(with: users)
+        } else {
+            tableControllers = createNonPaginatedTableControllers(with: users)
         }
-    }
-    
-    private func fetchGitHubUsersNonPaginated() {
-        repository.fetchGitHubUsers { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let users):
-                self.users = users
-                self.tableControllers = self.createNonPaginatedTableControllers(with: users)
-            case .failure(let error):
-                print("Error fetching GitHub users: \(error)")
-            }
-        }
+        totalPages = (users.count + usersPerPage - 1) / usersPerPage
     }
     
     private func createPaginatedTableControllers(with users: [GitHubUser]) -> [GitHubUsersTableViewController] {

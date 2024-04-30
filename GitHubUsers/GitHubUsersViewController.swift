@@ -48,9 +48,9 @@ class GitHubUsersViewController: UIViewController {
             }
             .store(in: &cancellables)
         
-        viewModel.$users
-                .sink { [weak self] users in
-                    self?.totalLabel.text = "Total Users: \(users.count)"
+        viewModel.$userTotalCount
+                .sink { [weak self] count in
+                    self?.totalLabel.text = "Total Users: \(count)"
                 }
                 .store(in: &cancellables)
         

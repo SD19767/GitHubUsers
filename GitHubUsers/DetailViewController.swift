@@ -40,6 +40,12 @@ class DetailViewController: UIViewController {
     
 
     @IBAction func saveButtonTap(_ sender: UIButton) {
+        do {
+            try GitHubUsersRepository.shared.updateGitHubUser(by: user)
+            showAlert(with: "Save Successful") // Show success message
+        } catch let error {
+            showAlert(with: error.localizedDescription)
+        }
     }
     
     @IBOutlet weak var saveButton: UIButton!
@@ -108,6 +114,14 @@ class DetailViewController: UIViewController {
         } else {
             linkStack.isHidden = true
         }
+    }
+    
+    private func showAlert(with message: String) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {  [weak self] _ in
+            self?.dismiss(animated: true, completion: nil)
+        }))
+        present(alertController, animated: true, completion: nil)
     }
 }
 

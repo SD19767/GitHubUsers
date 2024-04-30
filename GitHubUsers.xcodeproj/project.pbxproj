@@ -15,17 +15,17 @@
 		E17D6C072BDFC24300BEFD8C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E17D6C062BDFC24300BEFD8C /* Base */; };
 		E17D6C0F2BDFC30A00BEFD8C /* GitHubUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C0E2BDFC30A00BEFD8C /* GitHubUsersViewModel.swift */; };
 		E17D6C122BDFC33E00BEFD8C /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C112BDFC33E00BEFD8C /* GitHubUser.swift */; };
-		E17D6C152BDFC43500BEFD8C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C142BDFC43500BEFD8C /* Alamofire */; };
-		E17D6C172BDFC43500BEFD8C /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C162BDFC43500BEFD8C /* AlamofireDynamic */; };
-		E17D6C202BDFD96A00BEFD8C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C1F2BDFD96A00BEFD8C /* SnapKit */; };
-		E17D6C222BDFD96A00BEFD8C /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C212BDFD96A00BEFD8C /* SnapKit-Dynamic */; };
 		E17D6C282BDFE0EB00BEFD8C /* GitHubUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C252BDFE0EB00BEFD8C /* GitHubUserTableViewCell.swift */; };
-		E17D6C2B2BDFE45300BEFD8C /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C2A2BDFE45300BEFD8C /* AlamofireImage */; };
 		E17D6C312BE06BD600BEFD8C /* GitHubUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C302BE06BD600BEFD8C /* GitHubUsersRepository.swift */; };
 		E17D6C352BE07F6B00BEFD8C /* GitHubUsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C342BE07F6B00BEFD8C /* GitHubUsersTableViewController.swift */; };
 		E17D6C382BE0B12000BEFD8C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C362BE0B12000BEFD8C /* DetailViewController.swift */; };
 		E17D6C392BE0B12000BEFD8C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17D6C372BE0B12000BEFD8C /* DetailViewController.xib */; };
 		E17D6C3C2BE0C29600BEFD8C /* UserDetailDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D6C3B2BE0C29600BEFD8C /* UserDetailDataProvider.swift */; };
+		E17D6C3F2BE0ED8000BEFD8C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C3E2BE0ED8000BEFD8C /* Alamofire */; };
+		E17D6C412BE0ED8000BEFD8C /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C402BE0ED8000BEFD8C /* AlamofireDynamic */; };
+		E17D6C442BE0ED9A00BEFD8C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C432BE0ED9A00BEFD8C /* SnapKit */; };
+		E17D6C462BE0ED9A00BEFD8C /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C452BE0ED9A00BEFD8C /* SnapKit-Dynamic */; };
+		E17D6C492BE0EDAC00BEFD8C /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = E17D6C482BE0EDAC00BEFD8C /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,11 +52,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E17D6C202BDFD96A00BEFD8C /* SnapKit in Frameworks */,
-				E17D6C152BDFC43500BEFD8C /* Alamofire in Frameworks */,
-				E17D6C2B2BDFE45300BEFD8C /* AlamofireImage in Frameworks */,
-				E17D6C172BDFC43500BEFD8C /* AlamofireDynamic in Frameworks */,
-				E17D6C222BDFD96A00BEFD8C /* SnapKit-Dynamic in Frameworks */,
+				E17D6C442BE0ED9A00BEFD8C /* SnapKit in Frameworks */,
+				E17D6C3F2BE0ED8000BEFD8C /* Alamofire in Frameworks */,
+				E17D6C492BE0EDAC00BEFD8C /* AlamofireImage in Frameworks */,
+				E17D6C412BE0ED8000BEFD8C /* AlamofireDynamic in Frameworks */,
+				E17D6C462BE0ED9A00BEFD8C /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,11 +134,11 @@
 			);
 			name = GitHubUsers;
 			packageProductDependencies = (
-				E17D6C142BDFC43500BEFD8C /* Alamofire */,
-				E17D6C162BDFC43500BEFD8C /* AlamofireDynamic */,
-				E17D6C1F2BDFD96A00BEFD8C /* SnapKit */,
-				E17D6C212BDFD96A00BEFD8C /* SnapKit-Dynamic */,
-				E17D6C2A2BDFE45300BEFD8C /* AlamofireImage */,
+				E17D6C3E2BE0ED8000BEFD8C /* Alamofire */,
+				E17D6C402BE0ED8000BEFD8C /* AlamofireDynamic */,
+				E17D6C432BE0ED9A00BEFD8C /* SnapKit */,
+				E17D6C452BE0ED9A00BEFD8C /* SnapKit-Dynamic */,
+				E17D6C482BE0EDAC00BEFD8C /* AlamofireImage */,
 			);
 			productName = GitHubUsers;
 			productReference = E17D6BF72BDFC24200BEFD8C /* GitHubUsers.app */;
@@ -169,9 +169,9 @@
 			);
 			mainGroup = E17D6BEE2BDFC24200BEFD8C;
 			packageReferences = (
-				E17D6C132BDFC43500BEFD8C /* XCRemoteSwiftPackageReference "Alamofire" */,
-				E17D6C1E2BDFD96A00BEFD8C /* XCRemoteSwiftPackageReference "SnapKit" */,
-				E17D6C292BDFE45300BEFD8C /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				E17D6C3D2BE0ED7F00BEFD8C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E17D6C422BE0ED9A00BEFD8C /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E17D6C472BE0EDAC00BEFD8C /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = E17D6BF82BDFC24200BEFD8C /* Products */;
 			projectDirPath = "";
@@ -435,7 +435,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E17D6C132BDFC43500BEFD8C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		E17D6C3D2BE0ED7F00BEFD8C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
@@ -443,7 +443,7 @@
 				minimumVersion = 5.9.1;
 			};
 		};
-		E17D6C1E2BDFD96A00BEFD8C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		E17D6C422BE0ED9A00BEFD8C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -451,7 +451,7 @@
 				minimumVersion = 5.7.1;
 			};
 		};
-		E17D6C292BDFE45300BEFD8C /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+		E17D6C472BE0EDAC00BEFD8C /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
 			requirement = {
@@ -462,29 +462,29 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E17D6C142BDFC43500BEFD8C /* Alamofire */ = {
+		E17D6C3E2BE0ED8000BEFD8C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E17D6C132BDFC43500BEFD8C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = E17D6C3D2BE0ED7F00BEFD8C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		E17D6C162BDFC43500BEFD8C /* AlamofireDynamic */ = {
+		E17D6C402BE0ED8000BEFD8C /* AlamofireDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E17D6C132BDFC43500BEFD8C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = E17D6C3D2BE0ED7F00BEFD8C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
 		};
-		E17D6C1F2BDFD96A00BEFD8C /* SnapKit */ = {
+		E17D6C432BE0ED9A00BEFD8C /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E17D6C1E2BDFD96A00BEFD8C /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = E17D6C422BE0ED9A00BEFD8C /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		E17D6C212BDFD96A00BEFD8C /* SnapKit-Dynamic */ = {
+		E17D6C452BE0ED9A00BEFD8C /* SnapKit-Dynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E17D6C1E2BDFD96A00BEFD8C /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = E17D6C422BE0ED9A00BEFD8C /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
 		};
-		E17D6C2A2BDFE45300BEFD8C /* AlamofireImage */ = {
+		E17D6C482BE0EDAC00BEFD8C /* AlamofireImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E17D6C292BDFE45300BEFD8C /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			package = E17D6C472BE0EDAC00BEFD8C /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
