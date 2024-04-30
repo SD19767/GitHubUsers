@@ -82,15 +82,9 @@
 		E17D6BF92BDFC24200BEFD8C /* GitHubUsers */ = {
 			isa = PBXGroup;
 			children = (
-				E17D6BFA2BDFC24200BEFD8C /* AppDelegate.swift */,
-				E17D6BFC2BDFC24200BEFD8C /* SceneDelegate.swift */,
-				E17D6BFE2BDFC24200BEFD8C /* GitHubUsersViewController.swift */,
-				E17D6C0E2BDFC30A00BEFD8C /* GitHubUsersViewModel.swift */,
-				E17D6C302BE06BD600BEFD8C /* GitHubUsersRepository.swift */,
-				E17D6C252BDFE0EB00BEFD8C /* GitHubUserTableViewCell.swift */,
-				E17D6C342BE07F6B00BEFD8C /* GitHubUsersTableViewController.swift */,
-				E17D6C362BE0B12000BEFD8C /* DetailViewController.swift */,
-				E17D6C372BE0B12000BEFD8C /* DetailViewController.xib */,
+				E17D6C4E2BE1121800BEFD8C /* Repository */,
+				E17D6C4D2BE111FE00BEFD8C /* AppLifeCycle */,
+				E17D6C4A2BE1119E00BEFD8C /* Pages */,
 				E17D6C3A2BE0C26E00BEFD8C /* DataProvider */,
 				E17D6C102BDFC32600BEFD8C /* Models */,
 				E17D6C002BDFC24200BEFD8C /* Main.storyboard */,
@@ -115,6 +109,52 @@
 				E17D6C3B2BE0C29600BEFD8C /* UserDetailDataProvider.swift */,
 			);
 			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		E17D6C4A2BE1119E00BEFD8C /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				E17D6C4C2BE111DE00BEFD8C /* UserDetail */,
+				E17D6C4B2BE111BE00BEFD8C /* UserList */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		E17D6C4B2BE111BE00BEFD8C /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				E17D6BFE2BDFC24200BEFD8C /* GitHubUsersViewController.swift */,
+				E17D6C0E2BDFC30A00BEFD8C /* GitHubUsersViewModel.swift */,
+				E17D6C342BE07F6B00BEFD8C /* GitHubUsersTableViewController.swift */,
+				E17D6C252BDFE0EB00BEFD8C /* GitHubUserTableViewCell.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		E17D6C4C2BE111DE00BEFD8C /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E17D6C362BE0B12000BEFD8C /* DetailViewController.swift */,
+				E17D6C372BE0B12000BEFD8C /* DetailViewController.xib */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		E17D6C4D2BE111FE00BEFD8C /* AppLifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				E17D6BFA2BDFC24200BEFD8C /* AppDelegate.swift */,
+				E17D6BFC2BDFC24200BEFD8C /* SceneDelegate.swift */,
+			);
+			path = AppLifeCycle;
+			sourceTree = "<group>";
+		};
+		E17D6C4E2BE1121800BEFD8C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E17D6C302BE06BD600BEFD8C /* GitHubUsersRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
