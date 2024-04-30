@@ -32,5 +32,16 @@ class GitHubUsersTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewControllerToPresent = DetailViewController(user: users[indexPath.row])
+        if let sheet = viewControllerToPresent.sheetPresentationController {
+                sheet.detents = [.medium(), .large()]
+                sheet.largestUndimmedDetentIdentifier = .medium
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                sheet.prefersEdgeAttachedInCompactHeight = true
+                sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+            }
+        present(viewControllerToPresent, animated: true, completion: nil)
+    }
     
 }
