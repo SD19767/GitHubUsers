@@ -116,8 +116,9 @@
 		E17D6C4A2BE1119E00BEFD8C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				E17D6C4C2BE111DE00BEFD8C /* UserDetail */,
 				E17D6C4B2BE111BE00BEFD8C /* UserList */,
+				E17D6C562BE1388600BEFD8C /* UsersTableView */,
+				E17D6C4C2BE111DE00BEFD8C /* UserDetail */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -127,8 +128,6 @@
 			children = (
 				E17D6BFE2BDFC24200BEFD8C /* GitHubUsersViewController.swift */,
 				E17D6C0E2BDFC30A00BEFD8C /* GitHubUsersViewModel.swift */,
-				E17D6C342BE07F6B00BEFD8C /* GitHubUsersTableViewController.swift */,
-				E17D6C252BDFE0EB00BEFD8C /* GitHubUserTableViewCell.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -158,6 +157,15 @@
 				E17D6C302BE06BD600BEFD8C /* GitHubUsersRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		E17D6C562BE1388600BEFD8C /* UsersTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E17D6C342BE07F6B00BEFD8C /* GitHubUsersTableViewController.swift */,
+				E17D6C252BDFE0EB00BEFD8C /* GitHubUserTableViewCell.swift */,
+			);
+			path = UsersTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
