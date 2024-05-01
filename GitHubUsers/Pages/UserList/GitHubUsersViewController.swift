@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  GitHubUsersViewController.swift
 //  GitHubUsers
 //
-//  Created by Alvin on 2024/4/29.
+//  Created by Alvin on 2024/5/1.
 //
 
 import UIKit

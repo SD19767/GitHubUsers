@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GitHubUsersViewController" customModule="GitHubUsers" customModuleProvider="target">
+            <connections>
+                <outlet property="pageControl" destination="FDg-c9-5Ww" id="EKH-ks-N6W"/>
+                <outlet property="pageView" destination="TMW-BV-foI" id="zmV-rX-wii"/>
+                <outlet property="paginatedSegmentedControl" destination="fV0-hB-GT8" id="bfQ-j7-UJi"/>
+                <outlet property="totalLabel" destination="HAL-OB-XQP" id="nCt-U6-HIL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="fV0-hB-GT8">
+                    <rect key="frame" x="84" y="59" width="225" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="Paginated"/>
+                        <segment title="Non-paginated"/>
+                    </segments>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-db-gbf">
+                    <rect key="frame" x="16" y="106" width="196.33333333333334" height="40.666666666666657"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FDg-c9-5Ww">
+                    <rect key="frame" x="138.66666666666666" y="792" width="116" height="26"/>
+                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                </pageControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: 30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAL-OB-XQP">
+                    <rect key="frame" x="310.66666666666669" y="126.33333333333333" width="66.333333333333314" height="20.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMW-BV-foI">
+                    <rect key="frame" x="0.0" y="154.66666666666669" width="393" height="629.33333333333326"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="TMW-BV-foI" firstAttribute="top" secondItem="5bS-db-gbf" secondAttribute="bottom" constant="8" id="Kag-t0-xY6"/>
+                <constraint firstItem="5bS-db-gbf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="MSM-4A-kSV"/>
+                <constraint firstItem="FDg-c9-5Ww" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Oe4-hx-yeL"/>
+                <constraint firstItem="FDg-c9-5Ww" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="btp-a7-B9P"/>
+                <constraint firstItem="FDg-c9-5Ww" firstAttribute="top" secondItem="TMW-BV-foI" secondAttribute="bottom" constant="8" id="eg8-vK-WkR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HAL-OB-XQP" secondAttribute="trailing" constant="16" id="hIE-6R-1bI"/>
+                <constraint firstItem="HAL-OB-XQP" firstAttribute="bottom" secondItem="5bS-db-gbf" secondAttribute="bottom" id="ndx-zw-Nk2"/>
+                <constraint firstItem="5bS-db-gbf" firstAttribute="top" secondItem="fV0-hB-GT8" secondAttribute="bottom" constant="16" id="qbV-I1-STL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TMW-BV-foI" secondAttribute="trailing" id="uQ3-Lf-FXm"/>
+                <constraint firstItem="TMW-BV-foI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uY8-SE-1oN"/>
+            </constraints>
+            <point key="canvasLocation" x="72.51908396946564" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

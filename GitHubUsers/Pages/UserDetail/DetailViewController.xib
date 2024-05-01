@@ -21,7 +21,7 @@
                 <outlet property="nameTextField" destination="iA4-l7-knz" id="w4u-2K-8fl"/>
                 <outlet property="saveButton" destination="pyB-Jl-DK8" id="OIw-Jr-keq"/>
                 <outlet property="siteAdminBadge" destination="1Af-ji-hfT" id="HW7-D1-hCS"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="1Ev-JC-rBU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
